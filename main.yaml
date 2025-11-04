@@ -4,11 +4,11 @@
   roles:
   - "{{component}}"
   vars_files:
-  - "variable-{{env}}.yaml"
+  #- "variable-{{env}}.yaml"
 
-    # MONGODB_HOST: mongodb.nikitha.fun
-    # REDIS_HOST: redis.nikitha.fun
-    # CATALOGUE_HOST: catalogue.nikitha.fun 
-    # USER_HOST: user.nikitha.fun
-    # FRONTEND_HOST: frontend.nikitha.fun
-    # CART_HOST: cart.nikitha.fun
+    MONGODB_HOST: mongodb.nikitha.fun
+    REDIS_HOST: redis.nikitha.fun
+    CATALOGUE_HOST: catalogue.nikitha.fun 
+    USER_HOST: user.nikitha.fun
+    FRONTEND_HOST: frontend.nikitha.fun
+    CART_HOST: cart.nikitha.fun
