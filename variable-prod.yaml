@@ -1,0 +1,6 @@
+MONGODB_HOST: mongodb-prod..nikitha.fun # submit your host
+REDIS_HOST: redis-prod..nikitha.fun 
+CATALOGUE_HOST: catalogue-prod..nikitha.fun 
+USER_HOST: user-prod..nikitha.fun 
+CART_HOST: cart-prod..nikitha.fun
+FRONTEND_HOST: frontend-prod..nikitha.fun

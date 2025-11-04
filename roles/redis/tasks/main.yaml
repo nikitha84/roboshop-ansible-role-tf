@@ -1,0 +1,28 @@
+- name: distable redis
+  ansible.builtin.command: dnf module disable redis -y
+
+- name: enable redis
+  ansible.builtin.command: dnf module enable redis:7 -y
+    
+- name: Install redis 
+  ansible.builtin.dnf:
+    name: redis
+    state: present
+
+- name: allow remote access
+  ansible.builtin.replace:
+    path:  /etc/redis/redis.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
+- name: disable proctected mode #Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by edit
+  ansible.builtin.lineinfile:
+    path: /etc/redis/redis.conf
+    regexp: 'protected-mode'
+    line: 'protected-mode no'
+
+- name: start and enable redis
+  ansible.builtin.service:
+    name: redis
+    state: started
+    enabled: yes    
