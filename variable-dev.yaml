@@ -1,6 +1,6 @@
-MONGODB_HOST: mongodb-dev..nikitha.fun # submit your host
-REDIS_HOST: redis-dev..nikitha.fun 
-CATALOGUE_HOST: catalogue-dev..nikitha.fun 
-USER_HOST: user-dev..nikitha.fun 
-CART_HOST: cart-dev..nikitha.fun
-FRONTEND_HOST: frontend-dev..nikitha.fun
+MONGODB_HOST: mongodb-dev.nikitha.fun # submit your host
+REDIS_HOST: redis-dev.nikitha.fun 
+CATALOGUE_HOST: catalogue-dev.nikitha.fun 
+USER_HOST: user-dev.nikitha.fun 
+CART_HOST: cart-dev.nikitha.fun
+FRONTEND_HOST: frontend-dev.nikitha.fun
