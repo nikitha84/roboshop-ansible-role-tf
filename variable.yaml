@@ -1,6 +1,0 @@
-MONGODB_HOST: mongodb.nikitha.fun # submit your host
-REDIS_HOST: redis.nikitha.fun 
-CATALOGUE_HOST: catalogue.nikitha.fun 
-USER_HOST: user.nikitha.fun 
-CART_HOST: cart.nikitha.fun
-FRONTEND_HOST: frontend.nikitha.fun

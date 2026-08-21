@@ -1,33 +1,43 @@
-- name: app setup
+- name: app-setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: app-setup
+    tasks_from: app-setup.yaml
+  tags:
+  - deployment  
 
-- name: app setup
+- name: nodejs-setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: nodejs
+    tasks_from: nodejs.yaml 
+  tags:
+  - deployment    
 
-
-- name: copy mongo repo
+- name: copy mongo.repo
   ansible.builtin.copy:
     src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
-- name: install mongodb client
+- name: install mogodb client
   ansible.builtin.package:
-    name: mongodb-mongosh
+    name:  mongodb-mongosh
     state: present
 
-- name: connect to mongodb catalogue
-  ansible.builtin.command: mongosh --host {{ MONGODB_HOST }} --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')"
+- name: check products loaded
+  ansible.builtin.command: mongosh --host "{{ MONGODB_HOST }}" --quiet  --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
 
-- name: load products into mongodb
-  ansible.builtin.shell: mongosh --host {{ MONGODB_HOST }} </app/db/master-data.js
-  when: catalogue_output.stdout | int < 0
+- name: print the output
+  ansible.builtin.debug:
+    msg: "{{ catalogue_output }}"
 
-- name: app setup
+- name: load the products 
+  ansible.builtin.shell: mongosh --host "{{ MONGODB_HOST }}" </app/db/master-data.js
+  when: catalogue_output.stdout  | int < 0  #if less than 0 load products(index/integer)
+
+- name: system-setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: system-setup.yaml    
+    tasks_from: system-setup.yaml
+  tags:
+  - deployment  
+  
