@@ -1,2 +1,3 @@
+#meta=infformation
 dependencies:
   - role: common #catalogue depends on common role

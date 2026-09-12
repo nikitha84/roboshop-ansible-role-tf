@@ -1,5 +1,5 @@
-- name: mongodb # {{ component }}
-  hosts: mongodb
-  become: yes
-  roles: # while executing ,ansible connected to mongodb server then calling roles & executing mongodb in roles
-  - mongodb 
+# - name: mongodb # {{ component }}
+#   hosts: mongodb
+#   become: yes
+#   roles: # while executing ,ansible connected to mongodb server then calling roles & executing mongodb in roles
+#   - mongodb 

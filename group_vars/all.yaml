@@ -14,4 +14,3 @@ PAYMENT_HOST: payment-dev.nikitha.fun
 #if u want keep vars individually use var folder . ex: i wan t use vars for catalogue service use var folder
 
 
-#MONGODB_HOST: mongodb-prod.nikitha.fun 

@@ -26,8 +26,8 @@
     state: import
     name: all
     login_host: "{{ MYSQL_HOST }}"
-    login_user: root
-    login_password: RoboShop@1
+    login_user: "{{ MYSQL_ROOT_USER }}"
+    login_password: "{{ MYSQL_ROOT_PASSWORD }}" #unable  kept in vars becoz these are shipping vars
     target: "{{ item }}"
   loop:
   - /app/db/schema.sql
