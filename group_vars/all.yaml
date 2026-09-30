@@ -3,12 +3,12 @@ MONGODB_HOST: mongodb-dev.nikitha.fun
 REDIS_HOST: redis-dev.nikitha.fun
 RABBITMQ_HOST: RABBITMQ-dev.nikitha.fun
 MYSQL_HOST: mysql-dev.nikitha.fun
-CATALOGUE_HOST: catalogue-dev.nikitha.fun
-USER_HOST: user-dev.nikitha.fun
-CART_HOST: cart-dev.nikitha.fun
-SHIPPING_HOST: shipping-dev.nikitha.fun
+CATALOGUE_HOST: catalogue.backend-alb-dev.nikitha.fun
+USER_HOST: user.backend-alb-dev.nikitha.fun
+CART_HOST: cart.backend-alb-dev.nikitha.fun
+SHIPPING_HOST: shipping.backend-alb-dev.nikitha.fun
 FRONTEND_HOST: fronden.nikitha.fun
-PAYMENT_HOST: payment-dev.nikitha.fun
+PAYMENT_HOST: payment.backend-alb-dev.nikitha.fun
 
 #ansible will aceess variables from group_vars
 #if u want keep vars individually use var folder . ex: i wan t use vars for catalogue service use var folder
