@@ -7,7 +7,7 @@ CATALOGUE_HOST: catalogue.backend-alb-dev.nikitha.fun
 USER_HOST: user.backend-alb-dev.nikitha.fun
 CART_HOST: cart.backend-alb-dev.nikitha.fun
 SHIPPING_HOST: shipping.backend-alb-dev.nikitha.fun
-FRONTEND_HOST: fronden.nikitha.fun
+#FRONTEND_HOST: fronden.nikitha.fun
 PAYMENT_HOST: payment.backend-alb-dev.nikitha.fun
 
 #ansible will aceess variables from group_vars
