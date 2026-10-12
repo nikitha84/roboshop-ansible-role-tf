@@ -1,5 +1,6 @@
-- name: setup {{ component }} 
+- name: "setup {{ component }} server"
   hosts: "{{ component }}"
   become: yes
+  connection : local
   roles: # while executing ,ansible connected to mongodb server then calling roles & executing mongodb in roles
   - "{{ component }}"
