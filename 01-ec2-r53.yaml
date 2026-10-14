@@ -8,16 +8,16 @@
     domain_name: "nikitha.fun"
     env: dev
     instances:
-    # - mongodb
-    # - redis
-    # - mysql
-    # - rabbitmq
-    # - catalogue
-    # - user
-    # - cart
-    # - shipping
-    # - payment
-    # - frontend
+    - mongodb
+    - redis
+    - mysql
+    - rabbitmq
+    - catalogue
+    - user
+    - cart
+    - shipping
+    - payment
+    - frontend
     
   tasks:
   - name: create ec2 instance
